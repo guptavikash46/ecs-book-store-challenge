@@ -1,0 +1,12 @@
+<nav class="navbar fixed-top navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" style="cursor: pointer;" href="/books"
+        >Online Book Store</a>
+        <form class="form-inline" (ngSubmit)="onAddApplicant(f)" #f="ngForm">
+          <input class="form-control mr-sm-2" type="search" 
+          placeholder="Search any book!" aria-label="Search" name="searchText" [(ngModel)]="searchValue" required>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+    
+  </nav>

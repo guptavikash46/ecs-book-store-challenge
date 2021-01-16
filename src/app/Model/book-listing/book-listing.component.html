@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div *ngIf="withoutSearch">
+                <div class="card w-75" *ngFor="let book of bookdatas">
+                    <div class="card-body">
+                      <h5 class="card-title card-header">{{book.title}}</h5>
+                      <p class="card-text">Author: {{book.authors}}</p>
+                      <p class="card-text">Language: {{book.language_code}}</p>
+                      <p class="card-text">Ratings: {{book.average_rating}} </p>
+                      <p class="card-text">Price: {{book.price}}</p>
+                      <a (click) ="onAdd(book)" class="btn btn-outline-success mr-2">Add to cart</a>
+                      <Button class="btn btn-outline-primary" (click)="onCartAction()">Your cart</Button>
+                    </div>
+                  </div>
+            </div>
+            <div *ngIf="!withoutSearch">
+                <div class="card w-75"  *ngFor="let booknew of bookdatas2">
+                    <div class="card-body">
+                      <h5 class="card-title card-header">{{booknew.title}}</h5>
+                      <p class="card-text">Author: {{booknew.authors}}</p>
+                      <p class="card-text">Language: {{booknew.language_code}}</p>
+                      <p class="card-text">Ratings: {{booknew.average_rating}} </p>
+                      <p class="card-text">Price: {{booknew.price}}</p>
+                      <a (click) ="onAddCartWithSearch(booknew)" class="btn btn-outline-success mr-2">Add to cart</a>
+                      <Button class="btn btn-outline-primary" (click)="onCartAction()">Your cart</Button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

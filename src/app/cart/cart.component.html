@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card w-75"  *ngFor="let booknew of addedBooks">
+                <div class="card-body">
+                  <h5 class="card-title card-header">{{booknew.title}}</h5>
+                  <p class="card-text">Author: {{booknew.authors}}</p>
+                  <p class="card-text">Language: {{booknew.language_code}}</p>
+                  <p class="card-text">Ratings: {{booknew.average_rating}} </p>
+                  <p class="card-text">Price: {{booknew.price}}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
