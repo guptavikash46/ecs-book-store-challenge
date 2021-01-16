@@ -10,15 +10,16 @@ export class SearchService {
   searchedBooksToShow = new Subject<BookData[]>();
   booksAddedToCart = new Subject<BookData[]>();
   addedBooks: BookData[] = [];
-  constructor() { }
-
-  getAllCartsBooks(): BookData[] {
+  constructor() {
     this.booksAddedToCart.subscribe((
       data => {
         this.addedBooks = data;
       }
-    ))
-    console.log(this.addedBooks.length);
+    ));
+   }
+
+  getAllCartsBooks(): BookData[] {
+    //console.log(this.addedBooks.length);
     return this.addedBooks;
   }
 } 
